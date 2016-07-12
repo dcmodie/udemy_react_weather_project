@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Component } from 'react';
 class SearchBar extends Component {
 
     render (){
       return (
-          <div className="input-group" >
-            This is a search bar 
 
-          </div>
+        <form className="input-group">
+        <div> hello</div>
+          <input />
+          </form>
 
       );
     }
