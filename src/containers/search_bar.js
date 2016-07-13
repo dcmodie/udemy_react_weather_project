@@ -1,5 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import fetchWeather from '../actions/index.js';
+
 class SearchBar extends Component {
 
   constructor(props) {
@@ -11,7 +15,13 @@ class SearchBar extends Component {
   }
 
   onFormSubmit(event){
+    var value = 'temp';
     event.preventDefault();
+  //  this.props.selectBook(book)}
+    //API key for openweathermap.org
+    //955b244283db27f4be2a73fa648dd3b4
+    // working example:
+    //http://api.openweathermap.org/data/2.5/forecast?q=Chicago,us&mode=JSON&appid=955b244283db27f4be2a73fa648dd3b4
   }
 
   onInputChange (event){

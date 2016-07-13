@@ -1,8 +1,15 @@
-export function searchForCity(city){
-  // selectBook an action creator and needs to return
-  // an action.  an object with a type property
+import axios from 'axios'
+
+const API_KEY = '955b244283db27f4be2a73fa648dd3b4'
+//    //http://api.openweathermap.org/data/2.5/forecast?q=Chicago,us&mode=JSON&appid=955b244283db27f4be2a73fa648dd3b4
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+export const FETCH_WEATHER = 'FETCH_WEATHER';
+export function fetchWeather(city){
+
+  const url = `${ROOT_URL}&q=${city},us`;
+  const request = axios.get(url);
   return {
-    type:'SEARCHED_CITY',
-    payload:city
+    type: FETCH_WEATHER,
+    payload:request
   }
 }
