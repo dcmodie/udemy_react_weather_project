@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ForcastListReducer from './reducer_forcast.js'
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  forcasts: ForcastListReducer
 });
 
 export default rootReducer;
