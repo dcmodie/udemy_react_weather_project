@@ -6,8 +6,10 @@ class SearchBar extends Component {
       return (
 
         <form className="input-group">
-        <div> hello</div>
           <input />
+          <span className="input-group-btn">
+            <button type="submit" className="btn btn-secondary" > submit </button>
+          </span>
           </form>
 
       );
