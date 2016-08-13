@@ -3,16 +3,13 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { fetchWeather } from '../actions/index.js';
-
 class ForcastList extends Component {
-
   constructor(props) {
     super (props);
   }
   render (){
     console.log("render in forcast list called " )
-
-   console.log(this.props.forcasts)
+    console.log(this.props.forcasts)
     if (this.props["forcasts"]){
         return (
           <div>
@@ -54,9 +51,4 @@ function mapStateToProps(state){
 //   return bindActionCreators({fetchWeather}, dispatch)
 // }
 
-//Promote BookList from a component to a container
-// it needs to know about this new dispatch method, selectBook.
-// make it available as a prop
 export default connect( mapStateToProps, null)(ForcastList)
-
-//export default SearchBar
