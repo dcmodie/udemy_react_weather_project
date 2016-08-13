@@ -29,7 +29,7 @@ class SearchBar extends Component {
   }
 
   onInputChange (event){
-    console.log(event.target.value)
+    //console.log(event.target.value)
      var value = event.target.value;
      this.setState({term:value});
    }
@@ -55,7 +55,7 @@ class SearchBar extends Component {
 //export default BooksList
 // if state changes, container will re-render
 function mapStateToProps(state){
-  //whatever gets returned will show up as props inside of BookList
+  //whatever gets returned will show up as props inside of
   return{
      forcasts: state.forcasts
    }

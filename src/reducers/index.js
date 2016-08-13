@@ -3,7 +3,7 @@ import ForcastListReducer from './reducer_forcast.js'
 import BooksReducer from './reducer_books.js'
 
 const rootReducer = combineReducers({
-  books: BooksReducer
+  forcastList: ForcastListReducer
 });
 
 export default rootReducer;
