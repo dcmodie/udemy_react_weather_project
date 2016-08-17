@@ -3,6 +3,8 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { fetchWeather } from '../actions/index.js';
+import ForecastDetail from '../components/forecast_detail.js'
+
 class ForcastList extends Component {
   constructor(props) {
     super (props);
@@ -13,7 +15,7 @@ class ForcastList extends Component {
     if (this.props["forcasts"]){
         return (
           <div>
-            <h3>Details For: </h3>
+            <h3>Forcast List: </h3>
             <div>
             {
               this.props.forcasts.statusText
@@ -23,6 +25,9 @@ class ForcastList extends Component {
             {
               this.props.forcasts.data.city.name
             }
+            </div>
+            <div className='forcast-list'>
+              <div><ForecastDetail/></div>
             </div>
           </div>
         );

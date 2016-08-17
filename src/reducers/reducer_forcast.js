@@ -4,7 +4,7 @@
   //  console.log ("in reducer_forcast default function 0 " + action.type)
     switch (action.type){
       case 'FETCH_WEATHER':
-       console.log ("in reducer_forcast default function ")
+       console.log ("need to add to the list, not replace it")
         return action.payload
         break;
     }
